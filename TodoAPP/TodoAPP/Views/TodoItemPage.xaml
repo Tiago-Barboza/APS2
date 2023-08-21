@@ -13,14 +13,14 @@
   <ContentPage.Content>
       <StackLayout Margin="20" Spacing="10" VerticalOptions="StartAndExpand">
 
-            <Label Text="Nome"/>
+            <Label Text="Nome" TextColor="White"/>
             <Entry Text="{Binding Name}"/>
 
-            <Label Text="Notas"/>
+            <Label Text="Notas" TextColor="White"/>
             <Entry Text="{Binding Notes}"/>
 
             <StackLayout Orientation="Horizontal">
-                <Label Margin="0,10" HorizontalOptions="StartAndExpand" Text="Feito"/>
+                <Label Margin="0,10" HorizontalOptions="StartAndExpand" Text="Feito" TextColor="White"/>
                 <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding Done}"/>
             </StackLayout>
 

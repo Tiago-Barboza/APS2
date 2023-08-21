@@ -51915,11 +51915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Maui\\TodoAPP\\TodoAPP\\TodoAPP.csproj",
+      "projectUniqueName": "D:\\APS2\\TodoAPP\\TodoAPP\\TodoAPP.csproj",
       "projectName": "TodoAPP",
-      "projectPath": "C:\\Maui\\TodoAPP\\TodoAPP\\TodoAPP.csproj",
+      "projectPath": "D:\\APS2\\TodoAPP\\TodoAPP\\TodoAPP.csproj",
       "packagesPath": "C:\\Users\\Tiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Maui\\TodoAPP\\TodoAPP\\obj\\",
+      "outputPath": "D:\\APS2\\TodoAPP\\TodoAPP\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
