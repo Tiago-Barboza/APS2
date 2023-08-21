@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TodoAPP.Views.TodoItemPage"
+    Title="{Binding Name}">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#071952" Offset="0.1"/>
+            <GradientStop Color="#0B666A" Offset="0.9"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+  <ContentPage.Content>
+      <StackLayout Margin="20" Spacing="10" VerticalOptions="StartAndExpand">
+
+            <Label Text="Nome"/>
+            <Entry Text="{Binding Name}"/>
+
+            <Label Text="Notas"/>
+            <Entry Text="{Binding Notes}"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Margin="0,10" HorizontalOptions="StartAndExpand" Text="Feito"/>
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding Done}"/>
+            </StackLayout>
+
+            <Button Clicked="SalvarClique" Text="Salvar"/>
+
+            <Button Clicked="DeletarClique" Text="Deletar"/>
+
+            <Button Clicked="CancelarClique" Text="Cancelar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

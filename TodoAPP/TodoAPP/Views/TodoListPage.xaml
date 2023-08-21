@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TodoAPP.Views.TodoListPage"
+    Title="Todo">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#071952" Offset="0.1"/>
+            <GradientStop Color="#0B666A" Offset="0.9"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnItemAdded" 
+                     Text="+">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android,UWP" Value="plus.png" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView" Margin="5" ItemSelected="OnListItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal">
+                        <!--<Label Text="{Binding Name}"/>-->
+                        <StackLayout Orientation="Vertical">
+                            <Label TextColor="White">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Nome: "/>
+                                        <Span TextColor="White" Text="{Binding Name}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label TextColor="White">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Notas: "/>
+                                        <Span TextColor="White" Text="{Binding Notes}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <!--<Label Text="{Binding Notes}"/>-->
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            IsVisible="{Binding Done}"
+                            Source="Images/check.png"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            />
+                        <Image></Image>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
