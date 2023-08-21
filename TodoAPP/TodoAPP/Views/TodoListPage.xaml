@@ -28,7 +28,7 @@
                         HorizontalOptions="StartAndExpand"
                         Orientation="Horizontal">
                         <!--<Label Text="{Binding Name}"/>-->
-                        <StackLayout Orientation="Vertical" Margin="5">
+                        <StackLayout Orientation="Vertical">
                             <Label TextColor="White">
                                 <Label.FormattedText>
                                     <FormattedString>
